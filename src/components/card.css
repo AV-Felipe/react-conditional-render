@@ -1,0 +1,47 @@
+.mainCard {
+    box-sizing: border-box;
+    width: 450px;
+    height: 150px;
+    padding: 0;
+    margin: 2px;
+    list-style: none;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-radius: 8px;
+    overflow: hidden;
+
+}
+
+.Alive {
+    background-color: grey;
+}
+
+.Dead {
+    background-color: red;  
+}
+
+.Unknown {
+    background-color: pink;
+}
+
+.imageHolder img{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    width: 150px;
+}
+
+.textArea {
+    list-style: none;
+    padding: 3px;
+}
+
+.nameText {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.speciesText{
+    font-size: 16px;
+}
