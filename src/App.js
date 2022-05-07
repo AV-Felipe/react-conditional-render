@@ -32,11 +32,14 @@ function App() {
       </header>
       
       <main>
-        {characters.length > 0 ?
-          characters.map((item, index)=>{
-            return <Card url={item} keyValue={index} />
-          }): <p>Nada aqui</p>
-        }
+        <ul>
+          {characters.length > 0 ?
+            characters.map((item, index)=>{
+              return <Card url={item} key={index} />
+            }): <p>Nada aqui</p>
+          }
+        </ul>
+
       </main>
 
     </article>

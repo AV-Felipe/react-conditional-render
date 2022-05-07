@@ -1,12 +1,11 @@
 import React, {useEffect, useState} from "react";
 import './card.css';
 
-function Card (props) {
+function Card ({url}) {
 
     const [character, setCharacter] = useState("");
 
     useEffect(()=>{
-        const url = `${props.url}`;
 
         fetch(`${url}`)
         .then(response => response.json())
@@ -26,28 +25,24 @@ function Card (props) {
     },[]);
 
     return (
-        <ul className={"mainCard " + character.status} key={props.keyvalue}>
-            <li className="imageHolder">
+        <li className={"mainCard " + character.status}>
+            <div className="imageHolder">
                 <img src={character.image} />
-            </li>
+            </div>
 
-            <li>
+            <div className="textArea">
 
-                <ul className="textArea">
+                <h2 className="nameText">
+                    {character.name}
+                </h2>
 
-                    <li className="nameText">
-                        {character.name}
-                    </li>
+                <p className="speciesText">
+                    {character.species}
+                </p>
 
-                    <li className="speciesText">
-                        {character.species}
-                    </li>
+            </div>
 
-                </ul>
-
-            </li>
-
-        </ul>
+        </li>
     )
 }
 
