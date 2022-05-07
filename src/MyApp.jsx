@@ -42,7 +42,11 @@ function MyApp() {
 
 
     return(
-        <PageLayout main={<CardList addressArray={characters} />} header={<SearchElement onClickSearch={handleSearch} inputRef={episodeInput} />} />
+        <PageLayout 
+            main={<CardList addressArray={characters} />}
+            header={<SearchElement onClickSearch={handleSearch} inputRef={episodeInput} />}
+            logo="https://upload.wikimedia.org/wikipedia/commons/b/b1/Rick_and_Morty.svg"
+        />
 
     )
 

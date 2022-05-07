@@ -7,6 +7,7 @@ function PageLayout (props) {
         <article className="mainBody">
       
         <header className="pageHeader">
+            <img src={props.logo} className="mainTitle" />
             {props.header}
         </header>
         

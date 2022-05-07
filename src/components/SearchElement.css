@@ -1,0 +1,9 @@
+.searchContainer {
+    display: flex;
+    margin: 3px;
+    gap: 3px;
+}
+
+.inputField {
+    width: 125px;
+}

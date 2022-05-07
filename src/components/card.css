@@ -14,7 +14,7 @@
 }
 
 .Alive {
-    background-color: grey;
+    background-color: green;
 }
 
 .Dead {
@@ -27,8 +27,8 @@
     padding: 3px;
 }
 
-.Unknown {
-    background-color: pink;
+.unknown {
+    background-color: grey;
 }
 
 .imageHolder {
