@@ -21,15 +21,27 @@
     background-color: red;  
 }
 
+.deadBanner {
+    background-color: red;
+    box-shadow: rgba(0, 0, 0, 0.70) 0px 0px 5px 90px;
+    padding: 3px;
+}
+
 .Unknown {
     background-color: pink;
 }
 
-.imageHolder img{
+.imageHolder {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     width: 150px;
+    height: 150px;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
 .textArea {

@@ -26,8 +26,8 @@ function Card ({url}) {
 
     return (
         <li className={"mainCard " + character.status}>
-            <div className="imageHolder">
-                <img src={character.image} />
+            <div className="imageHolder" style={{ backgroundImage: `url(${character.image})` }}>
+            {character.status === "Dead"? <p className="deadBanner">Morto</p> : ""}
             </div>
 
             <div className="textArea">
