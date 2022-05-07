@@ -2,10 +2,13 @@ import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Card from './components/card';
+import CardList from './components/CardList';
+import PageLayout from './components/hoc/PageLayout';
 
 function App() {
 
-  const [characters, setCharacters] = useState("");
+  const [characters, setCharacters] = useState([]);
+  const [count, setCount] = useState(0);
 
 
   let episodeInput = React.createRef();
@@ -29,16 +32,13 @@ function App() {
       <header>
         <input type="text" ref={episodeInput} placeholder="digite um episódio" />
         <button type="button" onClick={handleSearch}>procurar</button>
+        <button type="button" onClick={()=>setCount(count+1)}>contar</button>
       </header>
       
       <main>
-        <ul>
-          {characters.length > 0 ?
-            characters.map((item, index)=>{
-              return <Card url={item} key={index} />
-            }): <p>Nada aqui</p>
-          }
-        </ul>
+        <p>{count}</p>
+
+        <CardList addressArray={characters} />
 
       </main>
 
