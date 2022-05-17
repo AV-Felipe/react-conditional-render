@@ -1,0 +1,10 @@
+.optionMenuContainer {
+    width: 100%;
+    height: 100vh;
+    background-color: olive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    row-gap: 5px;
+    column-gap: 5px;
+}

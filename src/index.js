@@ -7,11 +7,14 @@ import Card from './components/card';
 import PageLayout from './components/hoc/PageLayout';
 import CardList from './components/CardList';
 import MyApp from './MyApp';
+import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <MyApp />
+    <BrowserRouter>
+      <MyApp />
+    </BrowserRouter>
   </React.StrictMode>
 );
 

@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from "react";
 import "./PageLayout.css";
+import OptionsMenu from '../Options';
+import { Routes, Route, Link } from "react-router-dom";
 
 function PageLayout (props) {
 
@@ -12,8 +14,15 @@ function PageLayout (props) {
         </header>
         
         <main>
-  
-          {props.main}
+
+          <Routes>
+
+            <Route path="/" element={props.main} />
+
+            <Route path="options" element={<OptionsMenu />} />
+
+          </Routes>
+
   
         </main>
   

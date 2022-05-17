@@ -5,6 +5,8 @@ import Card from './components/card';
 import CardList from './components/CardList';
 import PageLayout from './components/hoc/PageLayout';
 import SearchElement from './components/SearchElement';
+import OptionsMenu from './components/Options';
+import { Routes, Route, Link } from "react-router-dom";
 
 function MyApp() {
 
@@ -42,11 +44,19 @@ function MyApp() {
 
 
     return(
-        <PageLayout 
-            main={<CardList addressArray={characters} />}
-            header={<SearchElement onClickSearch={handleSearch} inputRef={episodeInput} />}
-            logo="https://upload.wikimedia.org/wikipedia/commons/b/b1/Rick_and_Morty.svg"
-        />
+
+        <div>
+
+            <PageLayout 
+                main={<CardList addressArray={characters} />}
+                header={<SearchElement onClickSearch={handleSearch} inputRef={episodeInput} />}
+                logo="https://upload.wikimedia.org/wikipedia/commons/b/b1/Rick_and_Morty.svg"
+            />
+
+        </div>
+
+
+        
 
     )
 
